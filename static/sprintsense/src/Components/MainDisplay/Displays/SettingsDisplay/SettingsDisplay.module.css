@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mada:wght@200..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Tangerine:wght@400;700&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+    background: #f7f8fa;
+    box-sizing: border-box;
+
+    border-radius: 20px 0 0 20px;
+}
+
+.navBar{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.089);
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.menuItem{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.548);
+}
+
+.active{
+    color: #f7f8fa;
+    background-color: #0052cc7c;
+    border-radius: 20px 0 0 20px;
+    padding: 0.5em 0;
+}
+
+.right{
+    border-radius: 0 20px 20px 0 !important;
+}
+
+.buttonsBottom{
+    display: flex;
+    margin-top: auto;
+    gap: 2rem;
+}
+
+.checkcont{
+    display: flex;
+    width: fit-content;
+    color: black;
+    font-family: "Outfit", sans-serif;
+}
+
+.restartTutCont{
+    display: flex;
+    width: fit-content;
+    cursor: pointer;
+}

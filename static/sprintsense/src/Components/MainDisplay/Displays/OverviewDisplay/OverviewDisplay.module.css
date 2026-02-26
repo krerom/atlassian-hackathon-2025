@@ -1,0 +1,323 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+.brandGradient {
+    background: linear-gradient(135deg, #0052cc 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 0 1em;
+    line-height: 1.5;
+}
+
+.section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Status Cards */
+.statusGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.statusCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 6px;
+    border: 2px solid;
+    transition: transform 0.2s;
+}
+
+.statusCard:hover {
+    transform: translateY(-2px);
+}
+
+.statusGood {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.statusBad {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.statusIcon {
+    font-size: 2rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.statusGood .statusIcon {
+    color: #10b981;
+}
+
+.statusBad .statusIcon {
+    color: #ef4444;
+}
+
+.statusContent h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: #333;
+}
+
+.statusContent p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.statusDetail {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* Prediction Metrics */
+.predictionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.metricCard {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metricLabel {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.metricValue {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.metricUnit {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Risk Banner */
+.riskBanner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.riskHigh {
+    background: #fef2f2;
+    border-left: 4px solid #ef4444;
+}
+
+.riskLow {
+    background: #f0fdf4;
+    border-left: 4px solid #10b981;
+}
+
+.riskIcon {
+    font-size: 1.5rem;
+}
+
+.riskHigh .riskIcon {
+    color: #ef4444;
+}
+
+.riskLow .riskIcon {
+    color: #10b981;
+}
+
+.riskBanner strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.riskBanner p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Insight Card */
+.insightCard {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.insightTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.insightText {
+    margin: 0 0 0.75rem 0;
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.9375rem;
+}
+
+.toggleButton {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.toggleButton:hover {
+    color: #5568d3;
+}
+
+/* Account Info */
+.infoGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.infoRow:last-child {
+    border-bottom: none;
+}
+
+.infoLabel {
+    font-weight: 600;
+    color: #666;
+}
+
+.infoValue {
+    color: #333;
+}
+
+/* Action Buttons */
+.actionButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.actionButton,
+.actionButtonSecondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actionButton {
+    background: #667eea;
+    color: white;
+}
+
+.actionButton:hover {
+    background: #5568d3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(102, 126, 234, 0.25);
+}
+
+.actionButtonSecondary {
+    background: #f3f4f6;
+    color: #333;
+    border: 1px solid #d1d5db;
+}
+
+.actionButtonSecondary:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .statusGrid,
+    .predictionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .infoRow {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+    }
+
+    .actionButton,
+    .actionButtonSecondary {
+        width: 100%;
+    }
+}

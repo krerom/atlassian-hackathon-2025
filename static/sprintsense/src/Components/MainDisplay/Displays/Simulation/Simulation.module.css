@@ -1,0 +1,138 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.subtitle{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.heading h1{
+    font-weight: lighter;
+    font-size: 24px;
+    padding: 0;
+}
+
+.heading p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.subtitle span{
+    display: flex;
+    justify-content: center;
+}
+
+.historicPrintsCont,
+.simulatedSprintCont,
+.predictionsCont{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.cardsCont{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.sprintCard{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 1em;
+}
+
+.active{
+    border: 2px solid rgb(29, 78, 216) !important;
+    cursor: pointer;
+}
+
+.inactive{
+    cursor: not-allowed;
+}
+
+.simulatedSprint{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border: 2px solid rgb(29, 78, 216);
+    border-radius: 8px;
+    padding: 1em;
+    gap: 1em;
+}
+
+.simSprintHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simSprintHead span{
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    cursor: pointer;
+    gap: 0.5em;
+    background: linear-gradient(135deg, #0052cc 0%, #0747a6 100%);
+    color: aliceblue;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background 1s smooth;
+}
+
+.simSprintHead span:hover{
+    background: #0052cc;
+}
+
+.simSprintInputs{
+    display: flex;
+    gap: 1em;
+}
+
+.simSprintInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.metricsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.compareBox{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+    border: 1px solid #0052cc73;
+    border-radius: 8px;
+    width: 20%;
+    height: 5em;
+    font-family: "Inter", sans-serif;
+}
+
+.compareTitle{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.compareValue{
+    font-size: 24px;
+    font-weight: 500;
+}

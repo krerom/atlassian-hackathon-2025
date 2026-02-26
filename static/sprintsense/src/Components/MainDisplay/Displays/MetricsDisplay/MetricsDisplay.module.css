@@ -1,0 +1,213 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f4f5f7;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-y: auto;
+  border-radius: 20px 0 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0;
+}
+
+.limitSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.label, .note {
+  color: #5e6c84;
+  font-size: 14px;
+}
+
+.limitBtn {
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.limitBtn:hover {
+  background: #ebecf0;
+}
+
+.limitBtnActive {
+  background: #0052cc !important;
+  color: white !important;
+  border-color: #0052cc !important;
+}
+
+.customInput {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.applyBtn {
+  background: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.applyBtn:hover {
+  background: #003ead;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0;
+}
+
+.predictBtn {
+  background: #003ead;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.predictBtn:hover {
+  background: #0052cc;
+}
+
+/* Grid Layouts */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 24px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+/* Critical: This container forces Chart.js to respect size */
+.chartContainer {
+  position: relative;
+  height: 320px;        /* Fixed height = no overlap, perfect rendering */
+  width: 100%;
+  height: fit-content;
+}
+
+/* Enhanced card styling */
+.chartCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: fit-content;
+}
+
+.chartCard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.chartTitle {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #172b4d;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+/* Responsive grid for 3 prediction charts */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 24px;
+}
+
+/* Ensure current metrics also use same container */
+.currentData .chartCard {
+  flex: 1;
+  min-width: 0; /* Allows flex child to shrink properly */
+}
+
+.infos{
+  color: #5e6c84c7;
+  font-size: 12px;
+}
+
+.chartWrapper{
+  cursor: pointer;
+}
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+  .chartContainer {
+    height: 280px;
+  }
+  
+  .grid3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.chartWrapper {
+  flex: 1;
+  min-height: 300px;
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .grid3 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard { padding: 16px; }
+}
